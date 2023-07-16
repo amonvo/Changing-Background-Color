@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Changing Background Color</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            color: #000;
+            text-align: center;
+            transition: color 0.3s;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-top: 40px;
+            text-transform: uppercase;
+        }
+
+        .color-picker-container {
+            margin-top: 20vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .color-picker-container label {
+            font-size: 18px;
+        }
+
+        .color-picker-container input[type="color"] {
+            width: 200px;
+            height: 40px;
+            padding: 0;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Changing Background Color</h1>
+
+    <div class="color-picker-container">
+        <label for="colorPicker">Select a Color:</label>
+        <input type="color" id="colorPicker" onchange="applyCustomColor(this.value)">
+    </div>
+
+    <script>
+        function applyCustomColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>
